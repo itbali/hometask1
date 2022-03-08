@@ -1,7 +1,11 @@
 .default {
-
+ border-color: #7edbdc;
 }
 
 .red {
     background: red;
+}
+
+.lol {
+    background-color: black;
 }
