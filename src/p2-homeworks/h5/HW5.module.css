@@ -1,14 +1,50 @@
 .header {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    background-color: rgba(0, 0, 0, 0.8);
+    /*gap: 10px;*/
+    min-width: 50px;
+    padding: 20px 30px 20px 20px;
+    transition: 0.2s;
     width: fit-content;
-    padding: 10px;
+
+    }
+
+.header:hover {
+    min-height: 100px;
+    transition: 0.2s;
+    }
+
+.header span {
+    color: white;
+    transition: 0.2s;
+    }
+
+.header:hover span {
+    font-size: 0;
+    transition: 0.2s;
     }
 
 .headerLink {
+    transition: 0.2s;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    }
+
+.header:hover .headerLink {
     color: #e2c58b;
     font-size: 20px;
-    text-decoration: none;
+    height: fit-content;
+    line-height: 1.3em;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-decoration: underline;
+    transition: 0.2s;
+    }
+
+.headerLink:hover {
+    transform: scale(1.15) translate(10px, 2px);
+    transition: 0.2s;
     }

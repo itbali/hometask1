@@ -17,7 +17,7 @@ function Message(props: messageDataPropsType) {
             <div className={style.messageText}>
                 <div>
                     <p className ={style.messageName}> {props.name}</p>
-                    <p>{props.message}</p>
+                    <span>{props.message}</span>
                 </div>
                 <div className={style.messageTime}>{props.time}</div>
             </div>

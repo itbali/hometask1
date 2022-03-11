@@ -1,6 +1,7 @@
 import React, {MouseEventHandler} from 'react'
 import Affair from './Affair'
 import {AffairType, FilterType} from './HW2'
+import s from './Affairs.module.css'
 
 type AffairsPropsType = { // need to fix any
     filteredAffairs: Array<AffairType>
@@ -24,14 +25,16 @@ function Affairs(props: AffairsPropsType) {
     const setLow = () => {props.setFilter('low')}
 
     return (
-        <div>
+        <div className={s.affairWrapper}>
 
-            {mappedAffairs}
-
-            <button onClick={setAll}>All</button>
-            <button onClick={setHigh}>High</button>
-            <button onClick={setMiddle}>Middle</button>
-            <button onClick={setLow}>Low</button>
+            <div className={s.affairsContainer}>{mappedAffairs}</div>
+            
+            <div className={s.buttonsContainer}>
+                <button className={s.filterButton} onClick={setAll}>All</button>
+                <button className={s.filterButton} onClick={setHigh}>High</button>
+                <button className={s.filterButton} onClick={setMiddle}>Middle</button>
+                <button className={s.filterButton} onClick={setLow}>Low</button>
+            </div>
         </div>
     )
 }

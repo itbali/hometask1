@@ -6,11 +6,11 @@ import SuperCheckbox from './common/c3-SuperCheckbox/SuperCheckbox'
 
 function HW4() {
     const [text, setText] = useState<string>('')
-    const error = text ? '' : 'error'
+    const error = text ? '' : 'введите текст'
 
     const showAlert = () => {
         if (error) {
-            alert('введите текст...')
+            alert(error)
         } else {
             alert(text) // если нет ошибки показать текст
         }
@@ -22,7 +22,7 @@ function HW4() {
     return (
         <div>
             <hr/>
-            homeworks 4
+            <h1 style={{textAlign:'center'}}>homeworks 4</h1>
 
             <div className={s.column}>
                 <SuperInputText
@@ -34,20 +34,21 @@ function HW4() {
                 />
 
                 <SuperInputText
-                    className={s.blue} // проверьте, рабоет ли смешивание классов
+                    className={s.superInputClass} // проверьте, работает ли смешивание классов
                 />
 
                 {/*----------------------------------------------------*/}
 
-                <SuperButton clasik>
+                <SuperButton classic>
                     default
                 </SuperButton>
 
                 <SuperButton
-                    red // пропсу с булевым значением не обязательно указывать true
+                    className={s.defaultButton}
+                    red // пропсу с булевым значением необязательно указывать true
                     onClick={showAlert}
                 >
-                    delete {/*// название кнопки попадёт в children*/}
+                    delete {/* название кнопки попадёт в children*/}
                 </SuperButton>
 
                 <SuperButton disabled>

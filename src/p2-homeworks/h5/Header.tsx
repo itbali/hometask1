@@ -8,6 +8,7 @@ function Header() {
         <div>
 
             <nav className={s.header}>
+                <span>MENU</span>
             <NavLink to={PATH.PRE_JUNIOR} className={s.headerLink}>pre junior</NavLink>
             <NavLink to={PATH.JUNIOR} className={s.headerLink}>junior</NavLink>
             <NavLink to={PATH.JUNIOR_PLUS} className={s.headerLink}>super junior</NavLink>

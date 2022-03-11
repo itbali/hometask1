@@ -1,8 +1,20 @@
 .default {
- border-color: #7edbdc;
+    background-color: #426a6a;
+    border: 1px solid white;
+    color: white;
+    border-radius: 5px;
 }
 
+.default:disabled {
+    opacity: 0.5;
+    }
+
+.default:active {
+    background-color: #65a1a1;
+    }
+
 .red {
+    text-transform: uppercase;
     background: red;
 }
 

@@ -1,5 +1,6 @@
-.blue {
-    border-bottom: 5px solid blue;
+.superInputClass {
+    box-shadow: 3px 3px 10px#426a6a;
+    outline: none;
 }
 
 .column {
@@ -15,3 +16,10 @@
 .wow {
 background-color: lightgreen;
 }
+
+.defaultButton {
+    height: 22px;
+    padding: 0 10px;
+    border-radius: 5px;
+    margin: 8px 10px;
+    }

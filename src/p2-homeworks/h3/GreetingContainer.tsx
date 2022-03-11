@@ -4,30 +4,30 @@ import {UserType} from "./HW3";
 
 type GreetingContainerPropsType = {
     users: Array<UserType> // need to fix any
-    addUserCallback: (name:string)=>void // need to fix any
+    addUserCallback: (name: string) => void // need to fix any
 }
 
-// более простой и понятный для новичков
-// function GreetingContainer(props: GreetingPropsType) {
+const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUserCallback}) => {
+    const [name, setName] = useState<string>('')
+    const [error, setError] = useState<string>('')
 
-// более современный и удобный для про :)
-// уровень локальной логики
-const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUserCallback}) => { // деструктуризация пропсов
-    const [name, setName] = useState<string>('') // need to fix any
-    const [error, setError] = useState<string>('') // need to fix any
-
-    const setNameCallback = (e: any) => { // need to fix any
-        setName(e.currentTarget.value) // need to fix
-        console.log(name)
-        console.log(users)
+    const setNameCallback = (title:string) => {
+        setName(title);
+        setError('')
     }
+
     const addUser = () => {
-        alert(`Hello ${name} !`) // need to fix
-        addUserCallback(name)
-        setName('')
+        if (name.trim().length !== 0) {
+            alert(`Hello ${name} !`)
+            addUserCallback(name)
+            setName('')
+            setError('')
+        } else {
+            setError('Need some text')
+        }
     }
 
-    const totalUsers = users.length // need to fix
+    const totalUsers = users.length
 
     return (
         <Greeting

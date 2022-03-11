@@ -1,3 +1,47 @@
-.someClass {
+.affairWrapper {
+    border: 2px solid rgba(0, 0, 0, 0.58);
+    border-radius: 15px;
+    margin: 10px auto;
+    padding: 13px;
+    width: fit-content;
+    }
 
-}
+.filterButton {
+    margin: 10px;
+    }
+
+.buttonsContainer {
+    background-color: rgba(47, 33, 6, 0.51);
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 15px;
+    }
+
+.affairsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    }
+
+.singleAffair {
+    border-radius: 10px;
+    padding: 5px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    }
+.priority {
+    margin: 0 10px;
+    }
+
+.affairWrapper button {
+    min-height: 21px;
+    background-color: #426a6a;
+    padding: 0 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    text-transform: uppercase;
+    }

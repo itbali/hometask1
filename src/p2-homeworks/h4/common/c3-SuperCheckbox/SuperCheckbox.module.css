@@ -1,5 +1,7 @@
 .checkbox {
-
+background-color: #426a6a;
+    padding: 5px;
+    color: white;
 }
 
 .spanClassName {

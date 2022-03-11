@@ -1,8 +1,48 @@
 .someClass {
-
     border: 1px solid lightgreen;
 }
 
 .error {
     border: 1px solid red;
-}
+    }
+
+.GreetingContainer{
+    background-color: rgba(47, 33, 6, 0.51);
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    width: fit-content;
+    display: flex;
+    margin: 0 auto;
+    }
+
+.errorText {
+    text-align: center;
+    color: #ffb5b5;
+    font-weight: bold;
+    display: block;
+    /*border: 1px solid red;*/
+    }
+
+.GreetingContainer button {
+    height: 22px;
+    background-color: #426a6a;
+    padding: 0 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    text-transform: uppercase;
+    margin: 8px 10px;
+    }
+
+.GreetingContainer input{
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    }
+
+.userCounter {
+    margin-top: 8px;
+    color: white;
+    font-weight: 900;
+    }

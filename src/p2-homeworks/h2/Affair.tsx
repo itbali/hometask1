@@ -1,4 +1,5 @@
 import React, {MouseEventHandler} from 'react'
+import s from './Affairs.module.css'
 import {AffairType} from "./HW2";
 
 type AffairPropsType = {
@@ -12,12 +13,10 @@ function Affair(props: AffairPropsType) {
 
     return (
 
-        <div>
-            <b>
-                {props.affair.name}
-            </b>
-            <i>__Приоритет:__</i>
-            <span>{props.affair.priority}</span>
+        <div className={s.singleAffair}>
+            <b>{props.affair.name}</b>
+            <span className={s.priority}><i> Приоритет: </i>
+                <span>{props.affair.priority}</span></span>
             <button onClick={deleteCallback}>X</button>
         </div>
     )
