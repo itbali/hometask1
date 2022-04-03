@@ -50,6 +50,7 @@ function HW2() {
             <h1 style={{textAlign:"center"}}>homeworks 2</h1>
 
             <Affairs
+                filter={filter}
                 filteredAffairs={filteredAffairs}
                 setFilter={setFilter}
                 deleteAffairCallback={deleteAffairCallback}

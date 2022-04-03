@@ -4,6 +4,7 @@ import {AffairType, FilterType} from './HW2'
 import s from './Affairs.module.css'
 
 type AffairsPropsType = { // need to fix any
+    filter: FilterType
     filteredAffairs: Array<AffairType>
     setFilter: (filter:FilterType)=>void
     deleteAffairCallback: (_id: number) => void
@@ -24,16 +25,18 @@ function Affairs(props: AffairsPropsType) {
     const setMiddle = () => {props.setFilter('middle')}
     const setLow = () => {props.setFilter('low')}
 
+    const activeClass = s.filterActiveButton
+
     return (
         <div className={s.affairWrapper}>
 
             <div className={s.affairsContainer}>{mappedAffairs}</div>
             
             <div className={s.buttonsContainer}>
-                <button className={s.filterButton} onClick={setAll}>All</button>
-                <button className={s.filterButton} onClick={setHigh}>High</button>
-                <button className={s.filterButton} onClick={setMiddle}>Middle</button>
-                <button className={s.filterButton} onClick={setLow}>Low</button>
+                <button className={`${s.filterButton} ${props.filter==='all'?s.filterActiveButton:''}`} onClick={setAll}>All</button>
+                <button className={`${s.filterButton} ${props.filter==='high'?s.filterActiveButton:''}`} onClick={setHigh}>High</button>
+                <button className={`${s.filterButton} ${props.filter==='middle'?s.filterActiveButton:''}`} onClick={setMiddle}>Middle</button>
+                <button className={`${s.filterButton} ${props.filter==='low'?s.filterActiveButton:''}`} onClick={setLow}>Low</button>
             </div>
         </div>
     )

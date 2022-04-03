@@ -1,25 +1,31 @@
 .superInputClass {
-    box-shadow: 3px 3px 10px#426a6a;
+    box-shadow: 3px 3px 10px #426a6a;
     outline: none;
-}
+    }
 
 .column {
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px 0px #584800e8;
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
+    margin: 10px auto;
+    padding: 10px;
+    width: fit-content;
+    }
 
 .testSpanError {
     color: blue;
-}
+    }
 
 .wow {
-background-color: lightgreen;
-}
+    background-color: lightgreen;
+    }
 
 .defaultButton {
-    height: 22px;
-    padding: 0 10px;
     border-radius: 5px;
+    height: 22px;
     margin: 8px 10px;
+    padding: 0 10px;
     }

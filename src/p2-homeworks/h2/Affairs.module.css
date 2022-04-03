@@ -4,10 +4,24 @@
     margin: 10px auto;
     padding: 13px;
     width: fit-content;
+    box-shadow: 10px 10px 20px 0px #584800e8;
     }
 
 .filterButton {
     margin: 10px;
+    }
+
+.filterButton:hover {
+    transition: 0.2s;
+    background-color: #3948a9;
+    }
+
+.buttonsContainer .filterActiveButton {
+    background-color: #360067;
+    }
+
+.buttonsContainer .filterActiveButton:hover {
+    background-color: #552ba8;
     }
 
 .buttonsContainer {
@@ -37,6 +51,7 @@
     }
 
 .affairWrapper button {
+    transition: 0.2s;
     min-height: 21px;
     background-color: #426a6a;
     padding: 0 10px;

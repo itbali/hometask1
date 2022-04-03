@@ -9,9 +9,9 @@ function HW5() {
             {/*в gh-pages лучше работает HashRouter*/}
             <HashRouter>
 
-            <Header/>
+                <Header/>
 
-            <RoutesComponent/>
+                <RoutesComponent/>
 
             </HashRouter>
         </div>

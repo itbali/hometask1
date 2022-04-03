@@ -4,6 +4,14 @@ import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
 
 // export type UserType =
 
+export type SinglePerson = {
+    _id:number
+    name: string
+    age: number
+}
+export type StateType = Array<SinglePerson>
+
+
 const initialPeople = [
     {_id: 0, name: 'Кот', age: 3},
     {_id: 1, name: 'Александр', age: 66},
@@ -14,28 +22,27 @@ const initialPeople = [
 ]
 
 function HW8() {
-    const [people, setPeople] = useState<any>(initialPeople) // need to fix any
+    const [people, setPeople] = useState<StateType>(initialPeople)
 
-    // need to fix any
-    const finalPeople = people.map((p: any) => (
+    const finalPeople = people.map((p: SinglePerson) => (
         <div key={p._id}>
-            some name, age
+            {p.name} is {p.age} years old
         </div>
     ))
 
-    const sortUp = () => setPeople(homeWorkReducer(initialPeople, {type: 'sort', payload: 'up'}))
+    const sortUp = () => setPeople(homeWorkReducer(initialPeople, {type: 'SORT', payload: 'up'}))
+    const sortDown = () => setPeople(homeWorkReducer(initialPeople, {type: 'SORT', payload: 'down'}))
+    const checkAge = () => setPeople(homeWorkReducer(initialPeople, {type: 'CHECK', payload: 18}))
 
     return (
         <div>
             <hr/>
-            homeworks 8
-
-            {/*should work (должно работать)*/}
+            <h1>homeworks 8</h1>
             {finalPeople}
 
             <div><SuperButton onClick={sortUp}>sort up</SuperButton></div>
-            <div>sort down</div>
-            check 18
+            <div><SuperButton onClick={sortDown}>sort down</SuperButton></div>
+            <div><SuperButton onClick={checkAge}>check 18</SuperButton></div>
 
             <hr/>
             {/*для личного творчества, могу проверить*/}

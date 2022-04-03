@@ -1,0 +1,31 @@
+.editableSpanContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: fit-content;
+    }
+
+.buttonsContainer {
+    display: flex;
+    }
+
+.spanSuperClass {
+    position: relative;
+    }
+
+.spanSuperClass:hover {
+    text-decoration: underline;
+    }
+
+.spanSuperClass:before {
+    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Black_pencil.svg/1200px-Black_pencil.svg.png");
+    background-size: contain;
+    content: '';
+    height: 15px;
+    position: absolute;
+    width: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -20px;
+    }
